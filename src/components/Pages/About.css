@@ -20,7 +20,7 @@
     width: 35%;
   }
   .login {
-    background-color: #F2F2F2;
+    
     border-radius: 10px;
   }
   
@@ -35,7 +35,7 @@
   
   /* ----------------------------------------------- footer ---------------------------------------- */
   footer {
-    background: black;
+    background-color: #0f0f0f;
     width: 100%;
     bottom: 0;
     left: 0;
@@ -44,7 +44,7 @@
   footer .content {
     max-width: 1250px;
     margin: auto;
-    padding: 30px 40px 40px 40px;
+    padding: 10px;
   }
   footer .content .top {
     display: flex;
@@ -185,18 +185,18 @@
   }
   footer .bottom-details {
     width: 100%;
-    background: black;
+    background: #0f0f0f;
   }
   footer .bottom-details .bottom_text {
     max-width: 1250px;
     margin: auto;
     padding: 20px 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
   .bottom-details .bottom_text span,
   .bottom-details .bottom_text a {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 300;
     color: #fff;
     opacity: 0.8;
@@ -239,7 +239,9 @@
     }
     .bottom-details .bottom_text span,
     .bottom-details .bottom_text a {
-      font-size: 12px;
+      margin-left: 3vw;
+      font-weight: bold;
+      font-size: 4vw;
     }
   }
   @media (max-width: 520px) {

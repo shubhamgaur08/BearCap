@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.css';
 import awesome from './images/about - awesome.svg'
-import login from './images/about - awesome.svg'
+import login from './images/Social-influencer.svg'
 import { Link } from "react-router-dom";
 
 // import Alertss from "./Alertss";
@@ -26,10 +26,8 @@ function About() {
                     </div>
                 </div>
 
-                <div className="row login mt-5 mb-5 p-5">
-                    <div className="col-md-6">
-                        <img className="img-fluid" src={login} alt="about-awesome" />
-                    </div>
+                <div className="row login mt-5 mb-5 p-2">
+                    
                     <div className="col-md-6 d-flex flex-column justify-content-center">
                         <h2 className="mb-3" style={{ fontWeight: "Bold" }}>Don't Just Write,  <span style={{ color: "#9C27B0" }}>Optimize</span> </h2>
                         <p>
@@ -37,8 +35,11 @@ function About() {
                         Remember, these captions are suggestions, not scripts. You choose the ones that resonate with you and customize them to your unique voice. The AI is your creative fuel injection, empowering you to craft posts that truly connect.
                         </p>
                         
+                    </div> <div className="col-md-6">
+                        <img className="img-fluid" src={login} alt="about-awesome" />
                     </div>
                 </div>
+               
             </div>
 
             <footer>
@@ -50,7 +51,7 @@ function About() {
                         <div className="media-icons">
                             <Link to="https://www.facebook.com/shubhamg007" target="_blank"><i className="fab fa-facebook-f"></i></Link>
                             <Link to="https://github.com/shubhamgaur08" target="_blank"><i className="fab fa-github"></i></Link>
-                            <Link to="/"><i className="fab fa-instagram" ></i></Link>
+                            <Link to="https://www.instagram.com/gaur.shubhu/" target="_blank"><i className="fab fa-instagram" ></i></Link>
                             <Link to="https://www.linkedin.com/in/shubham-gound-45b75715b/" target="_blank"><i className="fab fa-linkedin-in"></i></Link>
                             <Link to="/"><i className="fab fa-youtube" target="_blank"></i></Link>
                         </div>
@@ -59,11 +60,8 @@ function About() {
                 </div>
                 <div className="bottom-details">
                     <div className="bottom_text">
-                        <span className="copyright_text">Copyright © 2024 <Link to="/">BearCap</Link>All rights reserved</span>
-                        <span className="policy_terms">
-                            <Link to="/">Privacy policy</Link>
-                            <Link to="/">Terms & condition</Link>
-                        </span>
+                        <span className="copyright_text">Copyright © 2024 <Link to="/">BearCap</Link></span>
+                        
                     </div>
                 </div>
             </footer>

@@ -13,7 +13,8 @@ function NavBar() {
       <nav className="navbar">
         <div className="nav-container">
           <NavLink exact to="/" className="nav-logo">
-            <span>BearCap</span>
+            <span>Bear</span>
+            <span id="cap">Cap</span>
             {/* <i className="fas fa-code"></i> */}
             <span className="icon">
             <img width="70" height="70" src="https://img.icons8.com/clouds/100/hand-with-pen.png" alt="hand-with-pen"/>

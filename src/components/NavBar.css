@@ -1,5 +1,5 @@
 .navbar {
-  background-color: black;
+  background-color: #3f75ae;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -8,6 +8,7 @@
   position: sticky;
   top: 0;
   z-index: 20;
+  background: linear-gradient(to right, #ec8728, #dc4490);
 }
 
 .nav-container {
@@ -19,17 +20,18 @@
   max-width: 1500px;
   position: relative;
 }
-
+#cap{
+  color: #e80777;
+}
 .nav-logo {
-  background: linear-gradient(to right, #ffbf00, #ff0080);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color:#ae0eca;
   align-items: center;
   margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
   flex-grow: 1;
+  font-weight: bold;
 
   display: flex;
   align-items: center;
@@ -37,7 +39,7 @@
 }
 
 .nav-logo:hover {
-  color: #ffdd40;
+  color: #055bb7;
 }
 
 .nav-logo .icon {
@@ -123,7 +125,7 @@
   }
 
   .nav-menu.active {
-    background: black;
+    background: linear-gradient(to right, #ff7b00, #c81c72);
     left: 0px;
     opacity: 1;
     transition: all 0.5s ease;
