@@ -51,8 +51,9 @@
         margin-bottom: 5px;
     }
 
-    #outlined-required{
-      
+    #outlined-required:hover{
+     
+    
     }
 
     @media (max-width: 768px) {
@@ -68,10 +69,23 @@
   background: linear-gradient(to right, #5c6bc0, #bd3c7d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  
 
 
 }
+   #title{
+    background: linear-gradient(to right, #bd3c7d, #5c6bc0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+   }
+
+  @media screen and (max-width: 357PX) {
+    #title{
+        font-size: 21px;
+    }
     
+  }
 
 .header h1{
    margin-bottom: 20px;

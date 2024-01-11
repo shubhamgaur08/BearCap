@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
-import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "./Icons";
-
+import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen  } from "./Icons";
+ 
 
 function NavBar() {
   const [click, setClick] = useState(false);
@@ -13,10 +13,10 @@ function NavBar() {
       <nav className="navbar">
         <div className="nav-container">
           <NavLink exact to="/" className="nav-logo">
-            <span>Caption-Bear</span>
+            <span>BearCap</span>
             {/* <i className="fas fa-code"></i> */}
             <span className="icon">
-              <CodeIcon />
+            <img width="70" height="70" src="https://img.icons8.com/clouds/100/hand-with-pen.png" alt="hand-with-pen"/>
             </span>
           </NavLink>
 
@@ -61,11 +61,11 @@ function NavBar() {
 
             {click ? (
               <span className="icon">
-                <HamburgetMenuOpen />{" "}
+                <HamburgetMenuClose />{" "}
               </span>
             ) : (
               <span className="icon">
-                <HamburgetMenuClose />
+                <HamburgetMenuOpen />
               </span>
             )}
           </div>

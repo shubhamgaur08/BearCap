@@ -44,14 +44,14 @@ function Home() {
       <div className="header">
       
       <form onSubmit={handleSubmit} className="form">
-        {/* <h1>AI Caption Generator</h1> */}<h1> Generate Captions For</h1>
+        <h2 id="title">Generate A.I Captions For</h2>
             <h1 className="typewriter">
               <Typewriter
                 options={{
                   strings: [
-                    "Facebook with A.I!",
-                    "Instagram with A.I!",
-                    "Youtube with A.I!",
+                    "Facebook!",
+                    "Instagram!",
+                    "Youtube!",
                   ],
                   autoStart: true,
                   loop: true,
@@ -65,6 +65,7 @@ function Home() {
           defaultValue="love"
           type="text"
           value={word}
+          color='secondary'
            onChange={(event) => setWord(event.target.value)}
         />
         <Button type="submit" variant="contained">{loading ? 'Generating...' : 'Generate Caption'}</Button>
