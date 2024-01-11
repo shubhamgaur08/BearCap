@@ -6,6 +6,7 @@ import { About } from "./components/Pages/About";
 
 import { Contact } from "./components/Pages/Contact";
 
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
@@ -19,8 +20,12 @@ function App() {
            
             <Route path="/contact" element={<Contact />} />
           </Routes>
+
+        
         </div>
+        
       </Router>
+      
   </>
   );
 }
