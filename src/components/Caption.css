@@ -1,10 +1,10 @@
 
 .cap-container {
     
+    height: 260px;
     
-    width: auto;
-    max-width: 80vw;
-    min-height: 20vh;
+    max-width:340px ;
+    margin: 10px 15px;
 
    
     
@@ -14,32 +14,30 @@
     justify-content: center;
     align-items: center;
     
-    margin-top: 10px;
-    margin-left: 8px;
+    /* margin-top: 10px;
+    margin-left: 8px; */
 
 cursor: pointer;
 padding: 8px 12px;
-background-color: #6adee8;
-border-radius: 15px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-color: black;
+/* background-color: #6adee8; */
+border-radius: 40px;
+background: #ff8080;
+box-shadow: inset 10px -10px 20px #e67373,
+            inset -10px 10px 20px #ff8d8d;
+color: #141313;
  font-family: 'Poppins', sans-serif;
 }
 
 .cap-container:hover {
-background-color: #e8e8e8;
-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
 }
 
-.cap-container:active {
-background-color: #d8d8d8;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-transform: translateY(0);
-}
+
 #copy{
     margin-top: 30px;
+    border-radius: 20px;
+    font-size: 15px;
     font-weight: bold;
     background: linear-gradient(to right, #ffbf00, #e94898);
     

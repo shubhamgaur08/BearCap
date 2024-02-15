@@ -1,18 +1,35 @@
 .caption-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 10px;
-    margin:20px
+  display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
+ flex-grow:initial;
+height: 100%;
 
     
     
   
 }
+@media (min-width: 600px) {
+  .caption-container {
+  
+    flex-wrap: wrap;
+  flex-grow:initial;
+  flex-flow: row wrap;
+  }
+  }
+
+.select{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width:500px;
+   
     margin: 20px auto;
     padding: 20px;
     /* border: 1px solid #ddd; */
@@ -30,8 +47,9 @@
     .form button[type="submit"] {
     padding: 10px 20px;
     border: none;
-    margin: 20px 0;
-    border-radius: 15px;
+    margin: 5px 0;
+    font-size: 18px;
+    border-radius: 30px;
     font-weight: bold;
     
       background: linear-gradient(to right, #ffbf00, #e94898);
@@ -69,20 +87,49 @@
   background: linear-gradient(to right, #5c6bc0, #bd3c7d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
+  margin: 5px;
+  font-size: 5vw;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 
 
+}
+.input {
+  width: 100%;
+  max-width: 300px;
+  height: 55px;
+  padding: 12px;
+  margin: 5px 0;
+  font-size: 16px;
+  border-radius: 15px;
+  border: 1.5px solid lightgrey; ;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0px 0px 20px -18px;
+}
+
+.input:hover {
+  border: 2px solid rgb(234, 209, 209);
+  box-shadow: 0px 0px 20px -17px;
+}
+
+.input:active {
+  transform: scale(0.95);
+}
+
+.input:focus {
+  border: 2px solid rgb(125, 124, 124);
 }
    #title{
     background: linear-gradient(to right, #bd3c7d, #5c6bc0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 7vw;
    }
 
   @media screen and (max-width: 357PX) {
     #title{
-        font-size: 19px;
+        font-size: 7vw;
     }
     
   }

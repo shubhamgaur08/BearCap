@@ -11,7 +11,7 @@ export default function Caption({ text }) {
       className="Caption" id="Caption"
       
     >
-      {copied ? "Copied to clipboard" : text}
+       {text}
 
       
     </p>
@@ -21,7 +21,7 @@ export default function Caption({ text }) {
         setTimeout(() => {
           setCopied(false);
         }, 3000);
-      }} >COPY</Button>
+      }} >  {copied ? "Copied!" : "Copy"}</Button>
       </div>
   );
 }

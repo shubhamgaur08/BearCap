@@ -4,10 +4,14 @@ import Caption from '../Caption';
 import './Home.css';
 import Button from '@mui/material/Button';
 import Typewriter from "typewriter-effect";
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
 function Home() {
   const [word, setWord] = useState('');
   const [captions, setCaptions] = useState([]);
   const [loading, setloading] = useState(false);
+  const [tone, setTone] = useState('Casual');
+  const [lang,setLang] = useState('english');
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -19,7 +23,7 @@ function Home() {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ word})
+      body: JSON.stringify({word,lang,tone})
       
     },
     setloading(true))
@@ -28,13 +32,10 @@ function Home() {
       .then(data => {
         
         setCaptions(data);
-        // captions=data;
-        // data.map((cap) => {
-        //     console.log(cap);
-        // })
+        
       })
       .catch(error => {
-        // Handle any errors that occurred during the request
+       
         console.error(error);
       });
   };
@@ -58,22 +59,52 @@ function Home() {
                 }}
               />
             </h1>
-      <TextField
-          required
-          id="outlined-required"
-          label="Type Your Words"
+      
+        <input placeholder="Type Few Words About Your Post...💕" type="text" name="text"required
+          className='input'
           defaultValue="love"
-          type="text"
           value={word}
-          color='secondary'
-           onChange={(event) => setWord(event.target.value)}
-        />
+           onChange={(event) => setWord(event.target.value)} ></input>
+           <div className="select">
+            <Select
+        labelId="demo-select-small-label"
+        id="demo-select-small"
+        defaultValue={tone}
+        value={tone}
+        label="tone"
+        color='secondary'
+        onChange={(event) => setTone(event.target.value)}
+        sx={{ m:0.5, minWidth: 50,borderRadius: 4 }} size="small"
+      >
+        
+    
+        <MenuItem value="Casual">Casual</MenuItem>
+        <MenuItem value="Cheerful">Cheerful</MenuItem>
+        <MenuItem value="Romantic">Romantic</MenuItem>
+        <MenuItem value="Funny">Funny</MenuItem>
+        <MenuItem value="Inspirational">Inspirational</MenuItem>
+        <MenuItem value="Sad">Sad</MenuItem>
+      </Select>
+      <Select
+        labelId="demo-select-small-label"
+        id="demo-select-small"
+        defaultValue={lang}
+        value={lang}
+        label="Language"
+        color='secondary'
+        onChange={(event) => setLang(event.target.value)}
+        sx={{ m:0.5,  minWidth: 50,borderRadius: 4  }} size="small"
+      >
+        
+    
+        <MenuItem value="english"> English</MenuItem>
+        <MenuItem value="hindi">Hindi</MenuItem>
+        
+      </Select>
+</div>
+
         <Button type="submit" variant="contained">{loading ? 'Generating...' : 'Generate Caption'}</Button>
-        {/* <input
-          
-         
-        /> */}
-        {/* <button  type="submit">{loading ? 'Generating...' : 'Generate Caption'}</button> */}
+       
       </form>
       </div>
       <div className="caption-container">

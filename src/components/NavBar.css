@@ -26,12 +26,13 @@
 .nav-logo {
   color:#ae0eca;
   align-items: center;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
   flex-grow: 1;
   font-weight: bold;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
   display: flex;
   align-items: center;
@@ -46,12 +47,17 @@
   display: inline-block;
   width: 3rem;
   height: 3rem;
-  margin-left: 16px;
-  margin-bottom: 5vh;
+  margin-left: 1px;
+  margin-bottom: 7vh;
 }
 @media (min-width:960px) {
   .icon{
-    margin:2vh
+    margin:3vh
+  }
+}
+@media (max-width:291px) {
+  #icon{
+    /* visibility: hidden; */
   }
 }
 
@@ -98,6 +104,7 @@
 .nav-item .active {
   color: #ffdd40;
   border: 1px solid #ffdd40;
+  
 }
 
 .nav-icon {
@@ -121,14 +128,16 @@
     top: 80px;
     left: -110%;
     opacity: 1;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
   }
 
   .nav-menu.active {
-    background: linear-gradient(to right, #ff7b00, #c81c72);
+    background: linear-gradient(to right, #ec8728, #dc4490);
     left: 0px;
     opacity: 1;
-    transition: all 0.5s ease;
+   top: 70px;
+    /* transition: all 0.5s ease; */
+    transition: transform 0.5s ease, background-color 0.5s ease;
     z-index: 1;
   }
   .nav-item .active {
@@ -151,7 +160,8 @@
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translate(-100%, -50%);
+    
+    transform: translate(-60%, -50%);
     width: 2rem;
     height: 2rem;
     cursor: pointer;
